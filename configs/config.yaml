@@ -1,0 +1,36 @@
+server:
+  port: ":8080"
+  mode: "debug" # debug or release
+  timeout: 30
+
+database:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  name: "mygoapi"
+  sslmode: "disable"
+  max_open_conns: 25
+  max_idle_conns: 5
+  conn_max_lifetime: 300
+
+jwt:
+  secret: "your-super-secret-jwt-key-change-in-production"
+  expiration_hours: 24
+
+logging:
+  level: "info"
+  file_path: "logs/app.log"
+
+redis:
+  host: "localhost"
+  port: 6379
+  password: ""
+  db: 0
+
+email:
+  smtp_host: "smtp.gmail.com"
+  smtp_port: 587
+  username: "your-email@gmail.com"
+  password: "your-app-password"
+  from: "noreply@yourapp.com"
